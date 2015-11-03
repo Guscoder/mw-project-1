@@ -1,7 +1,244 @@
-$red: #ff3300;
 
-$blue: #004400;
+$grey-lt: #eee;
+$grey-med: #777777;
+$grey-dark: #c3bfbf;
+$orange: #FFA500;
 
-h1{
-	color: $red;
+
+*{
+	box-sizing: border-box;
 }
+
+body{
+	font-family: "Roboto", sans-serif;
+}
+
+.header{
+	background-color: $orange;
+	height: 400px;
+}
+
+.header-title{
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	height: 100%;
+}
+
+.header-logo {
+	margin: 0;
+	height: 101px;
+	width: 157px;
+	float: left;
+	text-indent: 150%;             
+	white-space: nowrap;
+	overflow: hidden; 
+	background-image: url("http://jeremyabrahams.github.io/mw-project-1/img/factory-logo.png");
+}
+
+.header-nav-list{
+	list-style: none;
+	float: right;
+	font-weight: 500;
+	li {
+		display: inline-block;
+	}
+	a{
+		text-transform: uppercase;
+		font-size: 1em;
+		color: #fff;
+		text-decoration: none;
+	}
+
+}
+
+.banner{
+	clear: both;
+	padding-top: 50px;
+}
+
+.banner-title{
+	color:$grey-lt;
+	font-size: 48px;
+	font-weight: 100;
+	text-align: center;
+}
+
+.banner-text{
+	color: $grey-lt;
+	text-align: center;
+}
+
+.banner-text:after{
+	content: "";
+	display: block;
+	width: 556px;
+	height: 30px;
+	background-image: url(http://jeremyabrahams.github.io/mw-project-1/img/divider.png);
+	font-weight: 300;
+	background-repeat: no-repeat;
+	margin: 30px auto;
+}
+
+.intro{
+	color: $grey-dark;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-size: 32px;
+	text-align: center;
+	padding: 100px 60px;
+}
+
+.goals{
+	font-family: "Roboto", sans-serif;
+}
+
+.goals-headline{
+	color: $grey-med;
+	font-size: 28px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.intro p:after {
+	content: "";
+	display: block;
+	width: 556px;
+	height: 30px;
+	background-image: url(http://jeremyabrahams.github.io/mw-project-1/img/divider.png);
+	background-repeat: no-repeat;
+	margin: 0 auto;
+}
+
+.goals-list{
+	list-style: none;
+	padding: 0;
+	font-weight: 700;
+	li{
+		width: 31%;
+	/*	height: 225px;
+	*/	display: inline-block;
+		float: left;
+		margin: 1%;
+	}
+	li:nth-child(3n+1){
+		clear: left;
+	}
+}
+
+.goals-list:before,
+.goals-list:after{
+	content: "";
+	display: table;
+}
+
+.goals-list-text{
+	font-size: 14px;	
+}
+
+
+.colearners-section{
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+	h1{
+		text-align: center;
+		line-height: 1.9;
+		font-size: 28px;
+		color: #444444;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+}
+
+.colearners-list{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li{
+		width: 25%;
+		display: inline-block;
+		padding: 0 42px;
+		float: left;
+		text-align: center;
+	}
+		img{
+		max-width: 100%;
+		border-radius: 50%;
+	}
+}
+
+
+.colearners>li:nth-child(4n+1){
+	clear: left;
+}
+
+.social-icons{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	a li{
+		width: 20px;
+		height: 20px;
+		float: left;
+	}
+}
+
+
+.twitter-icon{
+	border: 1px solid red;
+	width: 20px;
+	height: 20px;
+	background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/slice.png');
+	background-repeat: no-repeat;
+	background-position: left;
+	text-indent: 150%;             
+	white-space: nowrap;
+	overflow: hidden; 
+}
+
+.facebook-icon{
+	border: 1px solid red;
+	width: 20px;
+	height: 20px;
+	background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/slice.png');
+	background-repeat: no-repeat;
+	background-position: -35px 0px;
+	text-indent: 150%;             
+	white-space: nowrap;
+	overflow: hidden; 
+}
+
+.dribble-icon{
+	border: 1px solid red;
+	width: 20px;
+	height: 20px;
+	background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/slice.png');
+	background-repeat: no-repeat;
+	background-position: -70px 0px;
+	text-indent: 150%;             
+	white-space: nowrap;
+	overflow: hidden; 
+}
+
+.linkedin-icon{
+	border: 1px solid red;
+	width: 20px;
+	height: 20px;
+	background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/slice.png');
+	background-repeat: no-repeat;
+	background-position: -105px 0px;
+	text-indent: 150%;             
+	white-space: nowrap;
+	overflow: hidden; 
+}
+
+.instructor{
+	clear: both;
+}
+
+
+
+
+
