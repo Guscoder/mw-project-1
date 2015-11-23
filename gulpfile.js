@@ -1,13 +1,46 @@
+
+
+
+
 var gulp = require('gulp');
 
 var sass = require('gulp-sass');
 
-gulp.task('sass', function(){ //can name it anything in quotes
-	return gulp.src('scss/style.scss') //grabbing this file to look at
-	.pipe(sass()) //refers to variable above
-	.pipe(gulp.dest('assets/css')); //copies to & creates this folder
+var browserSync = require('browser-sync').create();
+
+
+gulp.task('sass', function() {
+	return gulp.src('scss/style.scss')
+		.pipe(sass())
+		.pipe(gulp.dest('assets/css'));
 });
 
-gulp.task('watch', function(){
-	gulp.watch(['scss/*', 'scss/**/*'], ['sass']); // **refers to all folders & files in scss folder
+// Static server
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
 });
+
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], function() {
+
+    browserSync.init({
+        server: "./"
+    });
+
+    gulp.watch("scss/*.scss", ['sass']);
+    gulp.watch("*.html").on('change', browserSync.reload);
+});
+
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function() {
+    return gulp.src("scss/*.scss")
+        .pipe(sass())
+        .pipe(gulp.dest("assets/css"))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('default', ['serve']);
