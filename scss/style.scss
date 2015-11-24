@@ -27,7 +27,7 @@ HEADER SECTION
 *********************************************************/
 
 .header{
-	background-image: url(/assets/images/banner-image.jpg);
+	background-image: url(assets/images/banner-image.jpg);
 	height: 640px;
 }
 
@@ -311,7 +311,7 @@ INSTRUCTOR SECTION
 	padding-left: 84px;
 	height: 701px;
 	width: 1190px;
-	background-image: url("/assets/images/instructor-image.jpg");
+	background-image: url("assets/images/instructor-image.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	color: #ffffff;
@@ -401,7 +401,7 @@ COURSE INFO SECTION
 	margin: 0;
 	height: 672px;
 	width: 1190px;
-	background-image: url("/assets/images/footer-image.jpg");
+	background-image: url("assets/images/footer-image.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	color: #ffffff;
@@ -466,7 +466,7 @@ FOOTER SECTION
 	margin: 0;
 	height: 126px;
 	width: 1190px;
-	background-color: rgba(113,47,32, 0.3);
+	background-color: rgba(113,47,32, 0.3); 
 }
 
 
