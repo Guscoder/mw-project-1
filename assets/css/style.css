@@ -13,7 +13,7 @@ body {
 HEADER SECTION
 *********************************************************/
 .header {
-  background-image: url(/assets/images/banner-image.jpg);
+  background-image: url(assets/images/banner-image.jpg);
   height: 640px; }
 
 .header-title {
@@ -247,7 +247,7 @@ INSTRUCTOR SECTION
   padding-left: 84px;
   height: 701px;
   width: 1190px;
-  background-image: url("/assets/images/instructor-image.jpg");
+  background-image: url("assets/images/instructor-image.jpg");
   background-repeat: no-repeat;
   background-position: center;
   color: #ffffff; }
@@ -321,7 +321,7 @@ COURSE INFO SECTION
   margin: 0;
   height: 672px;
   width: 1190px;
-  background-image: url("/assets/images/footer-image.jpg");
+  background-image: url("assets/images/footer-image.jpg");
   background-repeat: no-repeat;
   background-position: center;
   color: #ffffff; }
