@@ -18,6 +18,9 @@ body{
 	font-family: "Roboto", sans-serif;
 	width: 1190px;
 	margin: 0 auto;
+	@media screen and (max-width: 1189px){
+		width: 100%;
+	}
 }
 
 
@@ -39,7 +42,7 @@ HEADER SECTION
 }
 
 .header-logo {
-	margin: 18px 0 0 34px;
+	margin: 1.125rem 0 0 2.125rem;
 	height: 101px;
 	width: 157px;
 	float: left;
@@ -50,18 +53,18 @@ HEADER SECTION
 }
 
 .header-nav-list{
-	padding: 35px 35px 0 0;
+	padding: 2.188rem 2.188rem 0 0;
 	margin: 0;
 	list-style: none;
 	float: right;
 	font-weight: 500;
 	li {
 		display: inline-block;
-		padding-left: 28px;
+		padding-left: 1.75rem;
 	}
 	a{
 		text-transform: uppercase;
-		font-size: 18px;
+		font-size: 1.125rem;
 		color: #fff;
 		text-decoration: none;
 	}
@@ -70,26 +73,26 @@ HEADER SECTION
 
 .banner{
 	clear: both;
-	padding-top: 50px;
+	padding-top: 7.625rem;
 }
 
 .banner-title{
 	color:$grey-lt;
-	font-size: 92px;
-	font-weight: 100;
-	line-height: 107px;
+	font-size: 5.75rem;
+	font-weight: 200;
+	line-height: 6.688rem;
 	text-align: center;
 	padding: 0;
 	margin: 0;
 }
 
 .banner-text{
-	padding: 5px 0 0;
+	padding: .3125rem 0 0;
 	margin: 0;
 	color: $grey-lt;
 	font-weight: 300;
-	font-size: 24px;
-	line-height: 28px;
+	font-size: 1.5rem;
+	line-height: 1.75rem;
 	text-align: center;
 }
 
@@ -101,7 +104,7 @@ HEADER SECTION
 	background-image: url(http://jeremyabrahams.github.io/mw-project-1/img/divider.png);
 	font-weight: 300;
 	background-repeat: no-repeat;
-	margin: 30px auto;
+	margin: 1.875rem auto;
 }
 
 
@@ -114,21 +117,27 @@ INTRO SECTION
 	color: $grey-dark;
 	font-family: "Roboto", sans-serif;
 	font-weight: 300;
-	font-size: 32px;
-	line-height: 56px;
+	font-size: 2rem;
+	line-height: 3.5rem;
 	text-align: center;
 	p{
 		width: 844px;
-		margin: 150px auto 0;
+		margin: 9.375rem auto 0;
+		@media screen and (max-width: 1189px){
+		width: 80%;
+	}
 	}
 	p:after {
 	content: "";
 	display: block;
 	width: 556px;
-	height: 30px;
+	height: 1.875rem;
 	background-image: url(http://jeremyabrahams.github.io/mw-project-1/img/divider.png);
 	background-repeat: no-repeat;
-	margin: 77px auto 127px;
+	margin: 4.813rem auto 7.938rem;
+	@media screen and (max-width: 1189px){
+		width: 55%;
+	}
 	}
 }
 
@@ -144,11 +153,11 @@ COURSE GOALS SECTION
 }
 
 .goals-headline{
-	margin: 0 0 45px;
+	margin: 0 0 2.813rem;
 	padding: 0;
 	color: $grey-med;
-	font-size: 28px;
-	line-height: 33px;
+	font-size: 1.75rem;
+	line-height: 2.063rem;
 	text-transform: uppercase;
 	font-weight: 500;
 	text-align: center;
@@ -157,19 +166,25 @@ COURSE GOALS SECTION
 
 .goals-list{
 	list-style: none;
-	padding: 0 0 0 2px;
+	padding: 0 0 0 .125rem;
 	margin: 0;
-	font-size: 16px;
+	font-size: 1rem;
 	h3{
-		font-size: 16px;
+		font-size: 1rem;
 		font-weight: 700;
 	}
 	li{
 		width: 28%;
 		display: inline-block;
 		float: left;
-		margin-left: 53px;
-		padding-bottom: 61px;
+		margin-left: 3.313rem;
+		padding-bottom: 3.813rem;
+		@media screen and (max-width: 1189px){
+		width: 45%;
+		margin-left: 1.5rem;
+		float: none;
+		vertical-align: text-top;
+		}
 	}
 	li:nth-child(3n+1){
 		clear: left;
@@ -178,8 +193,8 @@ COURSE GOALS SECTION
 
 
 .goals-list-text{
-	font-size: 18px;	
-	line-height: 24px;
+	font-size: 1.125rem;	
+	line-height: 1.5rem;
 	font-weight: 400;
 }
 
@@ -195,12 +210,11 @@ COLEARNERS SECTION
 
 .colearners-section{
 	font-family: "Roboto", sans-serif;
-	background: #eeeeee;
 	h1{
-		padding-top: 91px;
+		padding-top: 5.688rem;
 		text-align: center;
 		line-height: 1.9;
-		font-size: 28px;
+		font-size: 1.75rem;
 		color: #444444;
 		font-weight: 600;
 		text-transform: uppercase;
@@ -210,22 +224,25 @@ COLEARNERS SECTION
 
 .colearners-list{
 	list-style: none;
-	padding: 65px 0 0;
+	padding: 4.063rem 0 0;
 	margin: 0;
 	>li{
 		width: 25%;
 		display: inline-block;
-		padding: 0 21px 70px;
+		padding: 0 1.313rem 4.375rem;
 		float: left;
 		text-align: center;
+		@media screen and (max-width: 1189px){
+			width: 32%;
+		}
 	}
 		img{
 		max-width: 100%;
 		border-radius: 50%;
 	}
-	h3{
+	h2{
 		color: #444444;
-		font-size: 22px;
+		font-size: 1.375rem;
 		font-weight: 500;
 		line-height: 1.1;
 	}
@@ -243,18 +260,18 @@ COLEARNERS SECTION
 	text-align: center;
 	li{
 		display: inline-block;
-		width: 20px;
-		height: 20px;
+		width: 1.25rem;
+		height: 1.25rem;
 		padding: 0;
-		margin: 0 4.5px;
+		margin: 0 .25rem;
 	}
 }
 
 
 .twitter-icon{
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 1.25rem;
+	height: 1.25rem;
 	background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/slice.png');
 	background-repeat: no-repeat;
 	background-position: left;
@@ -265,8 +282,8 @@ COLEARNERS SECTION
 
 .facebook-icon{
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 1.25rem;
+	height: 1.25rem;
 	background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/slice.png');
 	background-repeat: no-repeat;
 	background-position: -35px 0px;
@@ -277,8 +294,8 @@ COLEARNERS SECTION
 
 .dribble-icon{
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 1.25rem;
+	height: 1.25rem;
 	background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/slice.png');
 	background-repeat: no-repeat;
 	background-position: -70px 0px;
@@ -289,8 +306,8 @@ COLEARNERS SECTION
 
 .linkedin-icon{
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 1.25rem;
+	height: 1.25rem;
 	background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/slice.png');
 	background-repeat: no-repeat;
 	background-position: -105px 0px;
@@ -306,43 +323,46 @@ INSTRUCTOR SECTION
 
 .instructor-section{
 	clear: both;
-	margin-top: 135px;
-	padding-top: 190px;
-	padding-left: 84px;
+	margin-top: -8.438rem;
+	padding-top: 11.88rem;
+	padding-left: 5.25rem;
 	height: 701px;
 	width: 1190px;
 	background-image: url("../images/instructor-image.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	color: #ffffff;
+	@media screen and (max-width: 1189px){
+			width: 100%;
+		}
 	h1{
 		padding: 0;
 		margin: 0;
-		font-size: 18px;
+		font-size: 1.125rem;
 		line-height: 2.9;
 		font-weight: 300;
 		text-transform: uppercase;
 	}
 	h3{
-		padding: 15px 0 0;
+		padding: .9375rem 0 0;
 		margin: 0;
-		font-size: 36px;
+		font-size: 2.25rem;
 		line-height: 1.2;
 		font-weight: 500;
 		text-transform: uppercase;
 	}
 	.instructor-employer{
-		padding: 5px 0 0;
+		padding: .3125rem 0 0;
 		margin: 0;
-		font-size: 22px;
+		font-size: 1.375rem;
 		line-height: 1.1;
 		font-weight: 500;
 	}
 	p{
 		width: 39%;
-		padding: 27px 0 0;
+		padding: 1.688rem 0 0;
 		margin: 0;
-		font-size: 20px;
+		font-size: 1.25rem;
 		line-height: 1.4;
 	}
 }
@@ -355,10 +375,14 @@ EXPERIENCE QUOTE SECTION
 	width: 975px;
 	height: 626px;	
 	margin: 0 auto;
-	padding-top: 120px;
+	padding-top: 7.5rem;
+	@media screen and (max-width: 1189px){
+			width: 85%;
+			height: auto;
+		}
 	blockquote p{
 			color: #E66244;
-			font-size: 48px;
+			font-size: 3rem;
 			line-height: 1.3;
 			font-weight: 300;
 			font-style: italic;
@@ -368,20 +392,20 @@ EXPERIENCE QUOTE SECTION
 		color: #aaaaaa;
 		font-weight: 500;		
 		text-align: center;
-		padding: 34px 0 0;
+		padding: 2.125rem 0 0;
 		margin: 0;
 	}	
 	.author{
-		padding: 0 0 5px;
+		padding: 0 0 .3125rem;
 		margin: 0;
-		font-size: 22px;
+		font-size: 1rem;
 		line-height: 1.1;
 	}
 	.author-about,
 	.author-course{
 		padding: 0;
 		margin: 0;
-		font-size: 16px;
+		font-size: 1rem;
 		line-height: 1.5;
 	}
 	.author-course{
@@ -405,11 +429,15 @@ COURSE INFO SECTION
 	background-repeat: no-repeat;
 	background-position: center;
 	color: #ffffff;
+	@media screen and (max-width: 1189px){
+			width: 100%;
+			height: auto;
+		}
 }
 
 .info{
 	margin: 0;
-	padding: 141px 0 0;
+	padding: 8.813rem 0 0;
 	height: 546px;
 }
 
@@ -423,33 +451,37 @@ COURSE INFO SECTION
 
 
 .details-list{
-	padding-left: 92px;
+	padding-left: 5.75rem;
 	dl{
 		margin: 0;
 		padding: 0;
-		font-size: 36px;
+		font-size: 2.25rem;
 		font-weight: 300;
 		.graduation, 
 		.size{
-			padding-bottom: 15px;
+			padding-bottom: .9375rem;
 		}
 	}
 }
 
-.signup h1{
+.signup {
 	position: relative;
-	top: -130px;
-	left: 80px;
-	width: 327px;
-	height: 98px;
+	right: -42.5rem;
+	top: -13.13rem;
+	width: 20.44rem;
+	height: 6.125rem;
 	margin: 0 auto;
-	padding: 26px 0 0;
+	padding: 1.625rem 0 0;
 	text-align: center;
-	font-size: 29.9px;
+	font-size: 1.813rem;
 	line-height: 1.2;
 	font-weight: 600;
 	text-transform: uppercase;
-	border: 5px solid white;
+	border: .3125rem solid white;
+	@media screen and (max-width: 1189px){
+			top: 0;
+			right: 0;
+		}
 	a{
 		color: #ffffff;
 		text-decoration: none;
@@ -464,17 +496,20 @@ FOOTER SECTION
 	position: relative;
 	padding: 0;
 	margin: 0;
-	height: 126px;
+	height: 7.875rem;
 	width: 1190px;
 	background-color: rgba(113,47,32, 0.3); 
+	@media screen and (max-width: 1189px){
+			width: 100%;
+		}
 }
 
 
 .footer-logo {
-	margin: 29px 30px 0 32px;
+	margin: 1.813rem 1.875rem 0 2rem;
 	padding: 0;
-	height: 64px;
-	width: 100px;
+	height: 4rem;
+	width: 6.25rem;
 	float: left;
 	text-indent: 150%;          
 	white-space: nowrap;
@@ -494,9 +529,9 @@ FOOTER SECTION
 footer dl{
 	display: inline-block;
 	margin: 0;
-	padding: 55px 0 00;
+	padding: 55px 0 0 0;
 	color: #ffffff;
-	font-size: 14px;
+	font-size: .875rem;
 	line-height: 1.1;
 }
 
