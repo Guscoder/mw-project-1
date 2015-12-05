@@ -108,7 +108,6 @@ HEADER SECTION
 }
 
 
-
 /*********************************************************
 INTRO SECTION
 *********************************************************/
@@ -125,7 +124,10 @@ INTRO SECTION
 		margin: 9.375rem auto 0;
 		@media screen and (max-width: 1189px){
 		width: 80%;
-	}
+		}
+		@media screen and (max-width: 639px){
+		font-size: 1.5rem;
+		}
 	}
 	p:after {
 	content: "";
@@ -135,8 +137,8 @@ INTRO SECTION
 	background-image: url(http://jeremyabrahams.github.io/mw-project-1/img/divider.png);
 	background-repeat: no-repeat;
 	margin: 4.813rem auto 7.938rem;
-	@media screen and (max-width: 1189px){
-		width: 55%;
+	@media screen and (max-width: 725px){
+		width: 100%;
 	}
 	}
 }
@@ -150,6 +152,9 @@ COURSE GOALS SECTION
 .goals{
 	font-family: "Roboto", sans-serif;
 	color: #777777;
+	@media screen and (max-width: 640px){
+			width: 95%;
+		}
 }
 
 .goals-headline{
@@ -166,27 +171,47 @@ COURSE GOALS SECTION
 
 .goals-list{
 	list-style: none;
-	padding: 0 0 0 .125rem;
+	padding: 0 .125rem 0;
 	margin: 0;
 	font-size: 1rem;
 	h3{
 		font-size: 1rem;
 		font-weight: 700;
+		@media screen and (max-width: 640px){
+		text-align: center;
+		}
 	}
 	li{
 		width: 28%;
-		display: inline-block;
+		display: block;
 		float: left;
 		margin-left: 3.313rem;
 		padding-bottom: 3.813rem;
 		@media screen and (max-width: 1189px){
-		width: 45%;
-		margin-left: 1.5rem;
-		float: none;
-		vertical-align: text-top;
+			width: 47%;
+			margin-left: 1.5rem;
+		}
+		@media screen and (max-width: 840px){
+			width: 45%;
+		}
+		@media screen and (max-width: 640px){
+			width: 100%;
+			margin-left: 0 auto;
 		}
 	}
 	li:nth-child(3n+1){
+		clear: left;
+		@media screen and (max-width: 1189px){
+		clear: none;
+		}
+	}
+}
+
+@media screen and (max-width: 1189px){
+	.goals-list li:nth-child(odd), li:nth-child(even){
+		clear: none;
+	}
+	.goals-list li:nth-child(odd){
 		clear: left;
 	}
 }
@@ -235,6 +260,9 @@ COLEARNERS SECTION
 		@media screen and (max-width: 1189px){
 			width: 32%;
 		}
+		@media screen and (max-width: 745px){
+			width: 49%;
+		}
 	}
 		img{
 		max-width: 100%;
@@ -251,6 +279,9 @@ COLEARNERS SECTION
 
 .colearners>li:nth-child(4n+1){
 	clear: left;
+	@media screen and (max-width: 745px){
+		clear: none;
+		}
 }
 
 
@@ -335,6 +366,15 @@ INSTRUCTOR SECTION
 	@media screen and (max-width: 1189px){
 			width: 100%;
 		}
+	@media screen and (max-width: 940px){
+		padding-top: 6rem;
+		}	
+	@media screen and (max-width: 870px){
+		height: auto;
+		padding: 0 1.313rem 0;
+		background-image: none;
+		color: #000;
+		}	
 	h1{
 		padding: 0;
 		margin: 0;
@@ -364,9 +404,21 @@ INSTRUCTOR SECTION
 		margin: 0;
 		font-size: 1.25rem;
 		line-height: 1.4;
+		@media screen and (max-width: 870px){
+		height: auto;
+			width: 100%;
+		}	
 	}
 }
 
+.main-instructor-image{
+	display: none;
+	@media screen and (max-width: 870px){
+		display: block;
+		width: 100%;
+		height: auto;
+		}	
+}
 
 /*********************************************************
 EXPERIENCE QUOTE SECTION
@@ -387,6 +439,9 @@ EXPERIENCE QUOTE SECTION
 			font-weight: 300;
 			font-style: italic;
 			text-align: center;
+			@media screen and (max-width: 639px){
+				font-size: 2rem;
+			}
 		}
 	footer{
 		color: #aaaaaa;
@@ -394,6 +449,9 @@ EXPERIENCE QUOTE SECTION
 		text-align: center;
 		padding: 2.125rem 0 0;
 		margin: 0;
+		@media screen and (max-width: 870px){
+			padding-bottom: 4rem;
+		}	
 	}	
 	.author{
 		padding: 0 0 .3125rem;
@@ -439,19 +497,18 @@ COURSE INFO SECTION
 	margin: 0;
 	padding: 8.813rem 0 0;
 	height: 546px;
-}
-
-.details-list,
-.signup{
-	padding: 0;
-	margin: 0;
-	display: inline-block;
-	width: 48%;
+	@media screen and (max-width: 930px){
+			text-align: center;
+			padding-top: 4rem;
+		}
 }
 
 
 .details-list{
 	padding-left: 5.75rem;
+	@media screen and (max-width: 930px){
+		padding-left: 0;
+	}
 	dl{
 		margin: 0;
 		padding: 0;
@@ -459,14 +516,15 @@ COURSE INFO SECTION
 		font-weight: 300;
 		.graduation, 
 		.size{
-			padding-bottom: .9375rem;
+			padding-bottom: .9375rem;	
 		}
+		
 	}
 }
 
 .signup {
 	position: relative;
-	right: -42.5rem;
+	right: -19.5rem;
 	top: -13.13rem;
 	width: 20.44rem;
 	height: 6.125rem;
@@ -479,9 +537,12 @@ COURSE INFO SECTION
 	text-transform: uppercase;
 	border: .3125rem solid white;
 	@media screen and (max-width: 1189px){
-			top: 0;
-			right: 0;
+		right: -12.5rem;
 		}
+	@media screen and (max-width: 930px){
+		position: static;
+		margin-top: 3rem;
+	}
 	a{
 		color: #ffffff;
 		text-decoration: none;

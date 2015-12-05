@@ -98,6 +98,9 @@ INTRO SECTION
     @media screen and (max-width: 1189px) {
       .intro p {
         width: 80%; } }
+    @media screen and (max-width: 639px) {
+      .intro p {
+        font-size: 1.5rem; } }
   .intro p:after {
     content: "";
     display: block;
@@ -106,9 +109,9 @@ INTRO SECTION
     background-image: url(http://jeremyabrahams.github.io/mw-project-1/img/divider.png);
     background-repeat: no-repeat;
     margin: 4.813rem auto 7.938rem; }
-    @media screen and (max-width: 1189px) {
+    @media screen and (max-width: 725px) {
       .intro p:after {
-        width: 55%; } }
+        width: 100%; } }
 
 /*********************************************************
 COURSE GOALS SECTION
@@ -116,6 +119,9 @@ COURSE GOALS SECTION
 .goals {
   font-family: "Roboto", sans-serif;
   color: #777777; }
+  @media screen and (max-width: 640px) {
+    .goals {
+      width: 95%; } }
 
 .goals-headline {
   margin: 0 0 2.813rem;
@@ -129,26 +135,43 @@ COURSE GOALS SECTION
 
 .goals-list {
   list-style: none;
-  padding: 0 0 0 .125rem;
+  padding: 0 .125rem 0;
   margin: 0;
   font-size: 1rem; }
   .goals-list h3 {
     font-size: 1rem;
     font-weight: 700; }
+    @media screen and (max-width: 640px) {
+      .goals-list h3 {
+        text-align: center; } }
   .goals-list li {
     width: 28%;
-    display: inline-block;
+    display: block;
     float: left;
     margin-left: 3.313rem;
     padding-bottom: 3.813rem; }
     @media screen and (max-width: 1189px) {
       .goals-list li {
-        width: 45%;
-        margin-left: 1.5rem;
-        float: none;
-        vertical-align: text-top; } }
+        width: 47%;
+        margin-left: 1.5rem; } }
+    @media screen and (max-width: 840px) {
+      .goals-list li {
+        width: 45%; } }
+    @media screen and (max-width: 640px) {
+      .goals-list li {
+        width: 100%;
+        margin-left: 0 auto; } }
   .goals-list li:nth-child(3n+1) {
     clear: left; }
+    @media screen and (max-width: 1189px) {
+      .goals-list li:nth-child(3n+1) {
+        clear: none; } }
+
+@media screen and (max-width: 1189px) {
+  .goals-list li:nth-child(odd), li:nth-child(even) {
+    clear: none; }
+  .goals-list li:nth-child(odd) {
+    clear: left; } }
 
 .goals-list-text {
   font-size: 1.125rem;
@@ -187,6 +210,9 @@ COLEARNERS SECTION
     @media screen and (max-width: 1189px) {
       .colearners-list > li {
         width: 32%; } }
+    @media screen and (max-width: 745px) {
+      .colearners-list > li {
+        width: 49%; } }
   .colearners-list img {
     max-width: 100%;
     border-radius: 50%; }
@@ -198,6 +224,9 @@ COLEARNERS SECTION
 
 .colearners > li:nth-child(4n+1) {
   clear: left; }
+  @media screen and (max-width: 745px) {
+    .colearners > li:nth-child(4n+1) {
+      clear: none; } }
 
 .social-icons {
   margin: 0;
@@ -271,6 +300,15 @@ INSTRUCTOR SECTION
   @media screen and (max-width: 1189px) {
     .instructor-section {
       width: 100%; } }
+  @media screen and (max-width: 940px) {
+    .instructor-section {
+      padding-top: 6rem; } }
+  @media screen and (max-width: 870px) {
+    .instructor-section {
+      height: auto;
+      padding: 0 1.313rem 0;
+      background-image: none;
+      color: #000; } }
   .instructor-section h1 {
     padding: 0;
     margin: 0;
@@ -297,6 +335,18 @@ INSTRUCTOR SECTION
     margin: 0;
     font-size: 1.25rem;
     line-height: 1.4; }
+    @media screen and (max-width: 870px) {
+      .instructor-section p {
+        height: auto;
+        width: 100%; } }
+
+.main-instructor-image {
+  display: none; }
+  @media screen and (max-width: 870px) {
+    .main-instructor-image {
+      display: block;
+      width: 100%;
+      height: auto; } }
 
 /*********************************************************
 EXPERIENCE QUOTE SECTION
@@ -317,12 +367,18 @@ EXPERIENCE QUOTE SECTION
     font-weight: 300;
     font-style: italic;
     text-align: center; }
+    @media screen and (max-width: 639px) {
+      .experience-quote blockquote p {
+        font-size: 2rem; } }
   .experience-quote footer {
     color: #aaaaaa;
     font-weight: 500;
     text-align: center;
     padding: 2.125rem 0 0;
     margin: 0; }
+    @media screen and (max-width: 870px) {
+      .experience-quote footer {
+        padding-bottom: 4rem; } }
   .experience-quote .author {
     padding: 0 0 .3125rem;
     margin: 0;
@@ -358,16 +414,16 @@ COURSE INFO SECTION
   margin: 0;
   padding: 8.813rem 0 0;
   height: 546px; }
-
-.details-list,
-.signup {
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  width: 48%; }
+  @media screen and (max-width: 930px) {
+    .info {
+      text-align: center;
+      padding-top: 4rem; } }
 
 .details-list {
   padding-left: 5.75rem; }
+  @media screen and (max-width: 930px) {
+    .details-list {
+      padding-left: 0; } }
   .details-list dl {
     margin: 0;
     padding: 0;
@@ -379,7 +435,7 @@ COURSE INFO SECTION
 
 .signup {
   position: relative;
-  right: -42.5rem;
+  right: -19.5rem;
   top: -13.13rem;
   width: 20.44rem;
   height: 6.125rem;
@@ -393,8 +449,11 @@ COURSE INFO SECTION
   border: .3125rem solid white; }
   @media screen and (max-width: 1189px) {
     .signup {
-      top: 0;
-      right: 0; } }
+      right: -12.5rem; } }
+  @media screen and (max-width: 930px) {
+    .signup {
+      position: static;
+      margin-top: 3rem; } }
   .signup a {
     color: #ffffff;
     text-decoration: none; }

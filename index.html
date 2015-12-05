@@ -11,6 +11,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+		<script src="assets/js/responsive-nav.js"></script>
+
     </head>
 
 <body>
@@ -251,6 +253,7 @@
 
 <section class="instructor-section">
 
+	<img class="main-instructor-image" src="assets/images/instructor-image.jpg" alt="instructor image">
 	<h1>Meet the Instructor</h1>
 	<h3>Jeremy Abrahams</h3>
 	<p class="instructor-employer">Mighty in the Midwest</p>
@@ -311,7 +314,26 @@
 
 </section>
 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.2.js"><\/script>')</script>
 
+  <script>
+    var nav = responsiveNav(".nav-collapse", {
+      animate: true,                    // Boolean: Use CSS3 transitions, true or false
+      transition: 284,                  // Integer: Speed of the transition, in milliseconds
+      label: "Menu",                    // String: Label for the navigation toggle
+      insert: "before",                  // String: Insert the toggle before or after the navigation
+      customToggle: "",                 // Selector: Specify the ID of a custom toggle
+      closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+      openPos: "relative",              // String: Position of the opened nav, relative or static
+      navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
+      navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+      jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+      init: function(){},               // Function: Init callback
+      open: function(){},               // Function: Open callback
+      close: function(){}               // Function: Close callback
+    });
+  </script>
 
 </body>
 
