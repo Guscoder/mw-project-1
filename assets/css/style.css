@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*********************************************************
 GENERAL STYLES SECTION
 *********************************************************/
@@ -22,7 +23,7 @@ HEADER SECTION
 .header-title {
   color: #fff;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   height: 100%; }
 
 .header-logo {
@@ -35,21 +36,119 @@ HEADER SECTION
   overflow: hidden;
   background-image: url("http://jeremyabrahams.github.io/mw-project-1/img/factory-logo.png"); }
 
-.header-nav-list {
+.header-nav-list a {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  color: #fff;
+  text-decoration: none; }
+
+/*! responsive-nav.js 1.0.39 by @viljamis */
+.nav-collapse ul {
   padding: 2.188rem 2.188rem 0 0;
   margin: 0;
   list-style: none;
   float: right;
   font-weight: 500; }
-  .header-nav-list li {
-    display: inline-block;
-    padding-left: 1.75rem; }
-  .header-nav-list a {
-    text-transform: uppercase;
-    font-size: 1.125rem;
-    color: #fff;
-    text-decoration: none; }
 
+.nav-collapse li {
+  padding-left: 1.75rem;
+  display: inline-block; }
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  zoom: 1; }
+
+.nav-collapse.opened {
+  max-height: 9999px; }
+
+.nav-toggle {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+
+@media screen and (min-width: 49em) {
+  .js .nav-collapse {
+    position: relative; }
+  .js .nav-collapse.closed {
+    max-height: none; }
+  .nav-toggle {
+    display: none; } }
+
+/* ------------------------------------------
+  NAVIGATION STYLES
+  (+ responsive-nav.css file is loaded in the <head>)
+--------------------------------------------- */
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0; }
+
+.nav-collapse,
+.nav-collapse * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* ------------------------------------------
+  NAV TOGGLE STYLES
+--------------------------------------------- */
+@font-face {
+  font-family: "responsivenav";
+  src: url("../icons/responsivenav.eot");
+  src: url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"), url("../icons/responsivenav.ttf") format("truetype"), url("../icons/responsivenav.woff") format("woff"), url("../icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.nav-toggle {
+  position: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  text-indent: -999px;
+  position: relative;
+  width: 70px;
+  height: 55px;
+  float: right; }
+
+.nav-toggle:before {
+  color: #FFF;
+  /* Edit this to change the icon color */
+  font-family: "responsivenav", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 45px;
+  text-transform: none;
+  position: absolute;
+  content: "≡";
+  text-indent: 0;
+  text-align: center;
+  line-height: 55px;
+  speak: none;
+  width: 100%;
+  top: 40px;
+  left: 0; }
+
+.nav-toggle.active::before {
+  font-size: 24px;
+  content: "x"; }
+
+/*********************************************************
+BANNER SECTION
+*********************************************************/
 .banner {
   clear: both;
   padding-top: 7.625rem; }
@@ -75,11 +174,12 @@ HEADER SECTION
 .banner-text:after {
   content: "";
   display: block;
-  width: 556px;
+  width: 100%;
   height: 30px;
   background-image: url(http://jeremyabrahams.github.io/mw-project-1/img/divider.png);
   font-weight: 300;
   background-repeat: no-repeat;
+  background-position: center center;
   margin: 1.875rem auto; }
 
 /*********************************************************
@@ -104,10 +204,11 @@ INTRO SECTION
   .intro p:after {
     content: "";
     display: block;
-    width: 556px;
+    width: 100%;
     height: 1.875rem;
     background-image: url(http://jeremyabrahams.github.io/mw-project-1/img/divider.png);
     background-repeat: no-repeat;
+    background-position: center center;
     margin: 4.813rem auto 7.938rem; }
     @media screen and (max-width: 725px) {
       .intro p:after {
@@ -159,7 +260,7 @@ COURSE GOALS SECTION
         width: 45%; } }
     @media screen and (max-width: 640px) {
       .goals-list li {
-        width: 100%;
+        width: 95%;
         margin-left: 0 auto; } }
   .goals-list li:nth-child(3n+1) {
     clear: left; }
@@ -203,7 +304,7 @@ COLEARNERS SECTION
   margin: 0; }
   .colearners-list > li {
     width: 25%;
-    display: inline-block;
+    display: block;
     padding: 0 1.313rem 4.375rem;
     float: left;
     text-align: center; }
@@ -213,6 +314,11 @@ COLEARNERS SECTION
     @media screen and (max-width: 745px) {
       .colearners-list > li {
         width: 49%; } }
+    @media screen and (max-width: 540px) {
+      .colearners-list > li {
+        width: 100%;
+        padding: 1rem 0;
+        margin: 0 auto; } }
   .colearners-list img {
     max-width: 100%;
     border-radius: 50%; }
@@ -309,6 +415,9 @@ INSTRUCTOR SECTION
       padding: 0 1.313rem 0;
       background-image: none;
       color: #000; } }
+  @media screen and (max-width: 560px) {
+    .instructor-section {
+      padding-top: 8rem; } }
   .instructor-section h1 {
     padding: 0;
     margin: 0;
@@ -376,7 +485,7 @@ EXPERIENCE QUOTE SECTION
     text-align: center;
     padding: 2.125rem 0 0;
     margin: 0; }
-    @media screen and (max-width: 870px) {
+    @media screen and (max-width: 1205px) {
       .experience-quote footer {
         padding-bottom: 4rem; } }
   .experience-quote .author {
@@ -432,6 +541,12 @@ COURSE INFO SECTION
     .details-list dl .graduation,
     .details-list dl .size {
       padding-bottom: .9375rem; }
+    @media screen and (max-width: 460px) {
+      .details-list dl {
+        font-size: 1.8rem; } }
+    @media screen and (max-width: 365px) {
+      .details-list dl {
+        font-size: 1.6rem; } }
 
 .signup {
   position: relative;
@@ -454,6 +569,11 @@ COURSE INFO SECTION
     .signup {
       position: static;
       margin-top: 3rem; } }
+  @media screen and (max-width: 380px) {
+    .signup {
+      width: 15rem;
+      height: 5rem;
+      padding-top: 1.2rem; } }
   .signup a {
     color: #ffffff;
     text-decoration: none; }
